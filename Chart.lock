@@ -1,6 +1,0 @@
-dependencies:
-- name: kube-prometheus-stack
-  repository: oci://registry-1.docker.io/highball
-  version: 1.0.0
-digest: sha256:4bb0035111a2d6024f6dcc9537ac5b48f30181bdbb818204c4c121e64cbb999f
-generated: "2024-03-05T19:22:35.700197+02:00"
