@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: monitoring
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - name: monitoring
+            repoURL: "https://github.com/ivanmbizhev/monitoring.git"
+            cluster: https://kubernetes.default.svc
+            targetRevision: master
+            namespace: "default"
+            path: .
+            valueFile: values_argo.yaml
+  template:
+    metadata:
+      name: '{{name}}'
+      labels:
+        name: '{{name}}'
+        namespace: '{{namespace}}'
+    spec:
+      project: default
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        
+      source:
+        repoURL: '{{repoURL}}'
+        path: '{{path}}'
+        targetRevision: '{{targetRevision}}'
+        helm:
+          valueFiles:
+            - '{{valueFile}}'
+      destination:
+        server: '{{cluster}}'
+        namespace: '{{namespace}}'

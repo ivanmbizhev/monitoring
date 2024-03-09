@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 1.1.0
+description: Custom Prom-Grafana
+kubeVersion: '>=v1.25'
+name: kube-prometheus-stack
+version: 1.1.0
+dependencies:
+  - name: kube-prometheus-stack
+    version: 1.1.0
+    repository: oci://registry-1.docker.io/highball
+  - name: loki-distributed
+    version: 1.0.0
+    repository: oci://registry-1.docker.io/highball
