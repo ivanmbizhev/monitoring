@@ -11,7 +11,7 @@ spec:
             repoURL: "https://github.com/ivanmbizhev/monitoring.git"
             cluster: https://kubernetes.default.svc
             targetRevision: master
-            namespace: "default"
+            namespace: "monitoring"
             path: .
             valueFile: values_argo.yaml
   template:
