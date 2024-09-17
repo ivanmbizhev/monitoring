@@ -1,0 +1,9 @@
+dependencies:
+- name: kube-prometheus-stack
+  repository: oci://registry-1.docker.io/highball
+  version: 1.3.0
+- name: loki-distributed
+  repository: oci://registry-1.docker.io/highball
+  version: 1.1.0
+digest: sha256:289d225d3fd983f77b74e5f9f7a2939dd38aba7fbf65481d015adfc479f718cc
+generated: "2024-05-26T18:17:53.681096+03:00"

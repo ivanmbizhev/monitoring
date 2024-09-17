@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: monitoring
+  name: prom-loki
   namespace: argocd
 spec:
   generators:
     - list:
         elements:
-          - name: monitoring
+          - name: prom-loki
             repoURL: "https://github.com/ivanmbizhev/monitoring.git"
             cluster: https://kubernetes.default.svc
             targetRevision: master
