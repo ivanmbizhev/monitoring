@@ -5,5 +5,5 @@ dependencies:
 - name: loki-distributed
   repository: oci://registry-1.docker.io/highball
   version: 1.1.0
-digest: sha256:289d225d3fd983f77b74e5f9f7a2939dd38aba7fbf65481d015adfc479f718cc
-generated: "2024-05-26T18:17:53.681096+03:00"
+digest: sha256:35c364e789dc7cd223c4f9d8440cb3faf76d2839d2ce4f3d4fc066ae096223aa
+generated: "2024-09-17T19:11:52.262983+03:00"
