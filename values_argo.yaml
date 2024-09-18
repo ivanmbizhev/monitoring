@@ -136,20 +136,10 @@ loki:
     rulerConfig:
       storage:
         type: local
-  memcached:
-    results_cache:
-      enabled: false
   # Enable single binary mode
   singleBinary:
     # -- Number of replicas for single binary mode
-    replicas: 0
-    # -- Enable PVC storage for single binary (change to object storage in Production)
-    persistence:
-      enabled: true
-      size: 10Gi
-  chunksCache:
-    # default is 500MB, with limited memory keep this smaller
-    writebackSizeLimit: 10MB
+    replicas: 1
   backend:
     replicas: 0
   read:
