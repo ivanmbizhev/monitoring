@@ -2,8 +2,11 @@ dependencies:
 - name: kube-prometheus-stack
   repository: oci://registry-1.docker.io/highball
   version: 1.4.0
-- name: loki-stack
+- name: loki
   repository: oci://registry-1.docker.io/highball
   version: 1.1.0
-digest: sha256:1e54a1450af5442fee2cb4a2ab70a70856da8763e832f80ea713f24f0dbd3744
-generated: "2024-09-18T08:40:38.217268+03:00"
+- name: promtail
+  repository: https://grafana.github.io/helm-charts
+  version: 6.16.6
+digest: sha256:f3a31069ccf57c5836e82efb2623d610ff5c04baeb1fa589a34e886e062520bc
+generated: "2024-09-18T12:51:23.681093+03:00"

@@ -116,16 +116,22 @@ kube-prometheus-stack:
         #  egress:
         #  ingress:
 
-loki-stack:
+loki:
+  deploymentMode: SingleBinary
   loki:
-    # -- Disable multi-tenancy mode
-    auth_enabled: false
+    commonConfig:
+      replication_factor: 1
     storage:
-      # -- Enable PVC storage (change to object storage in Production)
-      type: filesystem
-    rulerConfig:
-      storage:
-        type: local
+      type: 'filesystem'
+    schemaConfig:
+      configs:
+      - from: "2024-01-01"
+        store: tsdb
+        index:
+          prefix: loki_index_
+          period: 24h
+        object_store: filesystem # we're storing on filesystem so there's no real persistence here.
+        schema: v13
   # Enable single binary mode
   singleBinary:
     # -- Number of replicas for single binary mode
@@ -135,8 +141,8 @@ loki-stack:
       enabled: true
       size: 10Gi
 
-  promtail:
-    enabled: true
-    config:
-      logLevel: info
-      serverPort: 3101
+promtail:
+  enabled: true
+  config:
+    logLevel: info
+    serverPort: 3101
