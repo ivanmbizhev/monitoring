@@ -148,6 +148,9 @@ loki:
     replicas: 0
   test:
     enabled: false
+  chunksCache:
+  # default is 500MB, with limited memory keep this smaller
+    writebackSizeLimit: 10MB
 
 promtail:
   enabled: true
