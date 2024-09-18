@@ -140,37 +140,14 @@ loki:
     persistence:
       enabled: true
       size: 10Gi
-  memcached:
-    chunk_cache:
-      enabled: false
   resultsCache:
   # -- Specifies whether memcached based results-cache should be enabled
     enabled: false
-    
   backend:
     replicas: 0
   read:
     replicas: 0
   write:
-    replicas: 0
-
-  ingester:
-    replicas: 0
-  querier:
-    replicas: 0
-  queryFrontend:
-    replicas: 0
-  queryScheduler:
-    replicas: 0
-  distributor:
-    replicas: 0
-  compactor:
-    replicas: 0
-  indexGateway:
-    replicas: 0
-  bloomCompactor:
-    replicas: 0
-  bloomGateway:
     replicas: 0
 
 promtail:
