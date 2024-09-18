@@ -158,3 +158,5 @@ promtail:
   config:
     logLevel: info
     serverPort: 3101
+    clients:
+      - url: http://loki-gateway/loki/api/v1/push
