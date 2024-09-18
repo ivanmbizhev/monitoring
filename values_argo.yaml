@@ -140,6 +140,12 @@ loki:
     persistence:
       enabled: true
       size: 10Gi
+  read:
+    replicas: 0
+  backend:
+    replicas: 0
+  write:
+    replicas: 0
 
 promtail:
   enabled: true
