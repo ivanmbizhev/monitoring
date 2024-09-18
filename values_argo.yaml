@@ -119,6 +119,11 @@ kube-prometheus-stack:
 loki:
   deploymentMode: SingleBinary
   loki:
+    memcached:
+      chunk_cache:
+        enabled: true
+      results_cache:
+        enabled: true 
     auth_enabled: false
     commonConfig:
       replication_factor: 1
