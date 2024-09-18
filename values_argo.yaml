@@ -147,10 +147,6 @@ loki:
       requests:
         cpu: 2
         memory: 2Gi
-    extraEnv:
-      # Keep a little bit lower than memory limits
-      - name: GOMEMLIMIT
-        value: 3750MiB
   memcached:
     chunk_cache:
       enabled: false
