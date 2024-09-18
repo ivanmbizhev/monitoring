@@ -119,11 +119,6 @@ kube-prometheus-stack:
 loki:
   deploymentMode: SingleBinary
   loki:
-    memcached:
-      chunk_cache:
-        enabled: false
-      results_cache:
-        enabled: false
     auth_enabled: false
     commonConfig:
       replication_factor: 1
@@ -141,7 +136,9 @@ loki:
     rulerConfig:
       storage:
         type: local
-
+  memcached:
+    results_cache:
+      enabled: false
   # Enable single binary mode
   singleBinary:
     # -- Number of replicas for single binary mode
