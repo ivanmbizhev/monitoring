@@ -149,6 +149,8 @@ loki:
     replicas: 0
   write:
     replicas: 0
+  test:
+    enabled: false
 
 promtail:
   enabled: true
