@@ -151,10 +151,10 @@ loki:
       # Keep a little bit lower than memory limits
       - name: GOMEMLIMIT
         value: 3750MiB
-
-chunksCache:
-  # default is 500MB, with limited memory keep this smaller
-  writebackSizeLimit: 10MB
+  chunksCache:
+    # default is 500MB, with limited memory keep this smaller
+    writebackSizeLimit: 10MB
+    
   backend:
     replicas: 0
   read:
