@@ -120,9 +120,6 @@ loki-stack:
   loki:
     # -- Disable multi-tenancy mode
     auth_enabled: false
-    commonConfig:
-      # -- Set minimum replication factor
-      replication_factor: 1
     storage:
       # -- Enable PVC storage (change to object storage in Production)
       type: filesystem
@@ -137,20 +134,9 @@ loki-stack:
     persistence:
       enabled: true
       size: 10Gi
-  test:
-    enabled: false
-  monitoring:
-    selfMonitoring:
-      enabled: false
-      grafanaAgent:
-        installOperator: false
-    lokiCanary:
-      enabled: false
 
   promtail:
     enabled: true
     config:
       logLevel: info
       serverPort: 3101
-      clients:
-        - url: http://loki-gateway/loki/api/v1/push
