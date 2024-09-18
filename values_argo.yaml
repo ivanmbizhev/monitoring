@@ -143,6 +143,9 @@ loki:
   memcached:
     chunk_cache:
       enabled: false
+  resultsCache:
+  # -- Specifies whether memcached based results-cache should be enabled
+    enabled: false
     
   backend:
     replicas: 0
