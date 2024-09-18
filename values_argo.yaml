@@ -135,7 +135,7 @@ loki:
   # Enable single binary mode
   singleBinary:
     # -- Number of replicas for single binary mode
-    replicas: 1
+    replicas: 0
     # -- Enable PVC storage for single binary (change to object storage in Production)
     persistence:
       enabled: true
