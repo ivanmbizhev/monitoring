@@ -133,6 +133,10 @@ loki:
           period: 24h
         object_store: filesystem # we're storing on filesystem so there's no real persistence here.
         schema: v13
+    rulerConfig:
+      storage:
+        type: local
+
   # Enable single binary mode
   singleBinary:
     # -- Number of replicas for single binary mode
