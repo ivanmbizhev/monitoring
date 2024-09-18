@@ -116,7 +116,7 @@ kube-prometheus-stack:
         #  egress:
         #  ingress:
 
-loki-stack:
+loki:
   loki:
     # -- Disable multi-tenancy mode
     auth_enabled: false
