@@ -178,3 +178,6 @@ promtail:
     clients:
       - url: http://prom-loki-gateway/loki/api/v1/push
 
+tempo:
+  persistence:
+    enabled: false
