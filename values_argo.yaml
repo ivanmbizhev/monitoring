@@ -160,10 +160,6 @@ promtail:
       - url: http://prom-loki-gateway/loki/api/v1/push
 
 tempo:
-  env:
-    GF_AUTH_ANONYMOUS_ENABLED: true
-    GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
-    GF_AUTH_DISABLE_LOGIN_FORM: true
   traces: 
     otlp: 
       grpc: 
