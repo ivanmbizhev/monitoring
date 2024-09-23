@@ -20,7 +20,7 @@ kube-prometheus-stack:
             type: tempo
             access: proxy
             orgId: 1
-            url: http://prom-loki-tempo.monitoring:3100
+            url: http://prom-loki-tempo.monitoring:3200
             basicAuth: false
             isDefault: true
             version: 1
