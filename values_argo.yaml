@@ -160,16 +160,24 @@ promtail:
       - url: http://prom-loki-gateway/loki/api/v1/push
 
 tempo:
-  traces: 
-    otlp: 
-      grpc: 
-        enabled: true 
-      http: 
-        enabled: true 
-    zipkin: 
-      enabled: false 
-    jaeger: 
-      thriftHttp: 
-        enabled: false 
-    opencensus: 
-      enabled: false 
+  env:
+    GF_AUTH_ANONYMOUS_ENABLED: true
+    GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
+    GF_AUTH_DISABLE_LOGIN_FORM: true
+
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+
+      datasources:
+        - name: Tempo
+          type: tempo
+          access: proxy
+          orgId: 1
+          url: http://tempo:3100
+          basicAuth: false
+          isDefault: true
+          version: 1
+          editable: false
+          apiVersion: 1
+          uid: tempo
