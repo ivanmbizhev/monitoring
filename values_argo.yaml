@@ -180,4 +180,4 @@ promtail:
 
 tempo:
   persistence:
-    enabled: false
+    enabled: true
