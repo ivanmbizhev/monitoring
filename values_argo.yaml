@@ -7,26 +7,6 @@ kube-prometheus-stack:
       enabled: true
       type: pvc
       size: 500Mi
-    # env:
-    #   GF_AUTH_ANONYMOUS_ENABLED: true
-    #   GF_AUTH_ANONYMOUS_ORG_ROLE: 'Admin'
-    #   GF_AUTH_DISABLE_LOGIN_FORM: true
-    # datasources:
-    #   datasources.yaml:
-    #     apiVersion: 1
-
-    #     datasources:
-    #       - name: Tempo
-    #         type: tempo
-    #         access: proxy
-    #         orgId: 1
-    #         url: http://prom-loki-tempo.monitoring:3200
-    #         basicAuth: false
-    #         isDefault: true
-    #         version: 1
-    #         editable: false
-    #         apiVersion: 1
-    #         uid: tempo
   alertmanager:
     enabled: false
 
@@ -177,7 +157,3 @@ promtail:
     serverPort: 3101
     clients:
       - url: http://prom-loki-gateway/loki/api/v1/push
-
-tempo:
-  persistence:
-    enabled: true
