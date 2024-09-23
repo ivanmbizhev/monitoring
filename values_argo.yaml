@@ -164,3 +164,16 @@ tempo:
     GF_AUTH_ANONYMOUS_ENABLED: true
     GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
     GF_AUTH_DISABLE_LOGIN_FORM: true
+  traces: 
+    otlp: 
+      grpc: 
+        enabled: true 
+      http: 
+        enabled: true 
+    zipkin: 
+      enabled: false 
+    jaeger: 
+      thriftHttp: 
+        enabled: false 
+    opencensus: 
+      enabled: false 
