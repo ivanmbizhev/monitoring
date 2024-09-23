@@ -1,5 +1,4 @@
 kube-prometheus-stack:
-
   namespaceOverride: "monitoring"
 
   grafana:
@@ -159,3 +158,9 @@ promtail:
     serverPort: 3101
     clients:
       - url: http://prom-loki-gateway/loki/api/v1/push
+
+tempo:
+  env:
+    GF_AUTH_ANONYMOUS_ENABLED: true
+    GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
+    GF_AUTH_DISABLE_LOGIN_FORM: true
