@@ -183,6 +183,8 @@ loki:
           period: 24h
         object_store: filesystem # we're storing on filesystem so there's no real persistence here.
         schema: v13
+    tracing:
+      enabled: true
     rulerConfig:
       storage:
         type: local
