@@ -1,20 +1,6 @@
 kube-prometheus-stack:
   namespaceOverride: "monitoring"
 
-  tempo:
-    traces:
-      otlp:
-        http:
-          enabled: true
-        grpc:
-          enabled: true
-    distributor:
-      config:
-        log_received_spans:
-          enabled: true
-        log_discarded_spans:
-          enabled: true
-
   grafana:
     enabled: true
     persistence:
@@ -225,3 +211,17 @@ promtail:
     serverPort: 3101
     clients:
       - url: http://prom-loki-gateway/loki/api/v1/push
+
+tempo:
+  traces:
+    otlp:
+      http:
+        enabled: true
+      grpc:
+        enabled: true
+  distributor:
+    config:
+      log_received_spans:
+        enabled: true
+      log_discarded_spans:
+        enabled: true
