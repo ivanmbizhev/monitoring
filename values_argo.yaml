@@ -214,12 +214,6 @@ promtail:
 
 tempo:
   config:
-    traces:
-      otlp:
-        http:
-          enabled: true
-        grpc:
-          enabled: true
     distributor:
       config:
         log_received_spans:
