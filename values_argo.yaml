@@ -213,15 +213,16 @@ promtail:
       - url: http://prom-loki-gateway/loki/api/v1/push
 
 tempo:
-  traces:
-    otlp:
-      http:
-        enabled: true
-      grpc:
-        enabled: true
-  distributor:
-    config:
-      log_received_spans:
-        enabled: true
-      log_discarded_spans:
-        enabled: true
+  config:
+    traces:
+      otlp:
+        http:
+          enabled: true
+        grpc:
+          enabled: true
+    distributor:
+      config:
+        log_received_spans:
+          enabled: true
+        log_discarded_spans:
+          enabled: true
